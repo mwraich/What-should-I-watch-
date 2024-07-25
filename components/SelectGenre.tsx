@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export function SelectGenre() {
   const [selectedGenre, setSelectedGenre] = useState<string>('')
-  const [movieRecommendation, setMovieRecommendation] = useState<Movie>({ title: "", synopsis: "" })
+  const [movieRecommendation, setMovieRecommendation] = useState<Movie>({ title: "", description: "" })
   const [loading, setLoading] = useState<boolean>(false)
   const genres = ["Action", "Comedy", "Drama", "Horror", "Romance", "Sci-Fi", "Documentary"]
 

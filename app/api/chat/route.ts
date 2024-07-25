@@ -20,10 +20,9 @@ export async function POST(req: Request) {
 		model: 'gpt-4o-mini',
 	});
 
-	console.log(completion.choices[0].message.content);
 	try {
 		const movieList: Movie[] = JSON.parse(
-			completion.choices[0].message.content,
+			completion.choices[0].message.content as string,
 		);
 		return NextResponse.json({ movieList });
 	} catch (error) {
